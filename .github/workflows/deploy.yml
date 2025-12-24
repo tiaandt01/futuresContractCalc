@@ -25,10 +25,10 @@ jobs:
           dotnet-version: 8.0.x
 
       - name: Restore
-        run: dotnet restore
+        run: dotnet restore FuturesContractSizeCalc/FuturesContractSizeCalc.sln
 
       - name: Build & Publish
-        run: dotnet publish -c Release -o release
+        run: dotnet publish FuturesContractSizeCalc/FrontEnd/FrontEnd.csproj -c Release -o release
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
